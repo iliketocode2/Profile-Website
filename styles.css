@@ -29,9 +29,16 @@ body{
   color: rgba(20, 20, 20);
   text-align: center;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 20px;
   width: 80%;
   overflow:auto;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 95%;
+    margin-top: 10px;
+  }
 }
 
 h1 {
@@ -45,34 +52,45 @@ h1 {
     transform: translateX(25%);
   }
 }
-ul {
-  list-style-type: none;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  background-color: rgba(255, 255, 255, .01);
-  padding-top: 5%px;
-  width: 60%;
-  font-size: 20px;
-  margin: auto;
-  justify-content: center;
-  display: flex;
-}
-li {
-  float: left;
-  justify-content: center;
-  margin: auto;
-}
-li a {
-  display: block;
+.topNav {
+  overflow: hidden;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 100;
   text-align: center;
-  padding: 14px 5px;
-  text-decoration: none;
-  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.topNavItem{
+  width: 100px;
+  padding: 10px;
+  cursor: pointer;
   transition: all .2s ease-in-out; 
 }
-.active:hover {
-  color: rgb(255, 255, 255);
+
+.topNavItem.active{
+  font-weight: 400;
+}
+
+.topNavItem:hover {
+  color: rgb(180, 152, 152);
   transform: scale(1.1); 
+}
+
+.topNavItem.active:hover {
+  color: black;
+}
+
+@media screen and (max-width: 700px) {
+  .topNav {
+    flex-direction: row-reverse;
+    width: 100%;
+    padding-top: 0;
+    text-align: center;
+  }  
+  .topNavItem{
+    width: 100px;
+  }
 }
 
 .mainContent{
@@ -89,16 +107,28 @@ li a {
   text-align: center;
   font-size: 20px;
 }
+
+@media screen and (max-width: 600px) {
+  .aboutBox {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .projectImage {
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 500px){
   .infoBox{
     width: 80%;
     margin-top: 0px;
     word-spacing: 0px;
   }
-  .aboutBox{
+  /* .aboutBox{
     width: 80%;
     margin: 0 auto;
-  }
+  } */
   .mainContent{
     display: block;
   }
@@ -124,7 +154,7 @@ li a {
 }
 .coloredText{
   text-align: center;
-  font-size: 10vw;
+  font-size: 8vw;
   font-weight: bold;
   background: linear-gradient(to right, rgb(13, 169, 216), rgb(23, 196, 7));
   -webkit-background-clip: text;
@@ -133,6 +163,13 @@ li a {
   text-transform: uppercase;
   line-height: 1;
 }
+
+@media screen and (max-width: 600px) {
+  .coloredText {
+    font-size: 10vw;
+  }
+}
+
 .projectImage{
   border: transparent;
   border-radius: 10px;
@@ -307,3 +344,4 @@ li a {
     line-height: 1.8;
   }
 }
+

@@ -15,21 +15,21 @@
   <div class="backgroundRec backgroundRec2"></div>
   <div class="backgroundRec backgroundRec3"></div>
   <div class="content" id="page1">
-    <ul>
-      <li><a class="active" onclick="homePage()">Home</a></li>
-      <li><a class="active" onclick="skillsPage()">Resume</a></li>
-      <li><a class="active" onclick="projectsPage()">Projects</a></li>
-      <li><a class="active" onclick="hobbiesPage()">Hobbies</a></li>
-    </ul>
+    <div class="topNav">
+      <span><a class="topNavItem active" onclick="homePage()">Home</a></span>
+      <span><a class="topNavItem" onclick="skillsPage()">Resume</a></span>
+      <span><a class="topNavItem" onclick="projectsPage()">Projects</a></span>
+      <span><a class="topNavItem" onclick="hobbiesPage()">Hobbies</a></span>
+    </div>
 
     <div class="header">
       <h1 class="centeredText coloredText" style="margin-top:10px">William Goldman</h1>
-      <p class="centeredText">Coding Coach</p>
+      <p class="centeredText">CEEO Intern</p>
     </div>
 
     <div class="mainContent">
       <div class="aboutBox">
-        <p>Hi, I'm Will! I am a senior at Dover-Sherborn Regional High School in Dover, MA. I love STEM related topics
+        <p>Hi, I'm Will! I am a freshman at Tufts University studying mechanical engineering. I love STEM related topics
           such as coding, aerospace engineering, and robotics. I have experience programming with Python 2.7 and 3, C++,
           Scratch, HTML, CSS, JavaScript, Java, and Swift. In my free time I love to build model rockets and other wood
           and Lego creations. I also am a fan of RC airplanes and circuitry!</p>
@@ -38,26 +38,25 @@
   </div>
 
   <div class="content" id="page2">
-    <ul>
-      <li><a class="active" onclick="homePage()">Home</a></li>
-      <li><a class="active" onclick="skillsPage()">Resume</a></li>
-      <li><a class="active" onclick="projectsPage()">Projects</a></li>
-      <li><a class="active" onclick="hobbiesPage()">Hobbies</a></li>
-    </ul>
+    <div class="topNav">
+      <span><a class="topNavItem" onclick="homePage()">Home</a></span>
+      <span><a class="topNavItem active" onclick="skillsPage()">Resume</a></span>
+      <span><a class="topNavItem" onclick="projectsPage()">Projects</a></span>
+      <span><a class="topNavItem" onclick="hobbiesPage()">Hobbies</a></span>
+    </div>
     <div class="header">
       <p class="centeredText">Resume</p>
     </div>
-    <iframe src="https://docs.google.com/document/d/1rsMpuUx6YPsXkx2gULPts5lbWpbxjkdtRMzC9qL4gvE/preview" width="95%"
-      height="400px" style="border:0;"></iframe>
+    <iframe src="https://docs.google.com/document/d/1rsMpuUx6YPsXkx2gULPts5lbWpbxjkdtRMzC9qL4gvE/preview" style="width:100%;min-height:500px;height:auto;border:0;"></iframe>
   </div>
 
   <div class="content" id="page3">
-    <ul>
-      <li><a class="active" onclick="homePage()">Home</a></li>
-      <li><a class="active" onclick="skillsPage()">Resume</a></li>
-      <li><a class="active" onclick="projectsPage()">Projects</a></li>
-      <li><a class="active" onclick="hobbiesPage()">Hobbies</a></li>
-    </ul>
+    <div class="topNav">
+      <span><a class="topNavItem" onclick="homePage()">Home</a></span>
+      <span><a class="topNavItem" onclick="skillsPage()">Resume</a></span>
+      <span><a class="topNavItem active" onclick="projectsPage()">Projects</a></span>
+      <span><a class="topNavItem" onclick="hobbiesPage()">Hobbies</a></span>
+    </div>
 
     <div class="header">
       <p class="centeredText">Projects</p>
@@ -66,27 +65,27 @@
     <p>The website I made for my robotics team!</p>
     <a class="link" href="https://dshsrobotics.com/index.html">dshsrobotics.com</a>
     <div class="header">
-      <img class="projectImage" src="robotics team cover.png" />
+      <img class="projectImage" src="images/robotics team cover.png" />
     </div>
 
     <p>A collaborative open source research project to determine the effectiveness of transforming a 3D printer into a
       microscope (paper coming soon!).</p>
     <div class="header">
-      <img class="projectImage" src="microscopeFusion360.png" />
-      <img class="projectImage" src="microscope1.jpg" />
-      <img class="projectImage" src="microscope2.jpg" />
+      <img class="projectImage" src="images/microscopeFusion360.png" />
+      <img class="projectImage" src="images/microscope1.jpg" />
+      <img class="projectImage" src="images/microscope2.jpg" />
     </div>
 
     <p>A website that generates iterations of the Mandelbrot Set with zoom capabilities</p>
     <a class="link" href="https://wills-fractal-generator-v1--iliketocode2.repl.co/">View my Fractal Generator Here</a>
     <div class="header">
       <img class="projectImage"
-        src="willFractal2.png" />
+        src="images/willFractal2.png" />
     </div>
 
     <p>A few examples of some of the model rockets I've built:</p>
     <div class="header">
-      <img class="projectImage" src="rockets.jpg" />
+      <img class="projectImage" src="images/rockets.jpg" />
     </div>
 
     <p>A pong game that I created on Code.org's app lab</p>
@@ -94,19 +93,19 @@
       Pong Game Here</a>
     <div class="header">
       <img style="width:200px;" class="projectImage"
-        src="willPong1.png" />
+        src="images/willPong1.png" />
       <img style="width:200px;" class="projectImage"
-        src="willPong.png" />
+        src="images/willPong.png" />
     </div>
   </div>
 
   <div class="content" id="page4">
-    <ul>
-      <li><a class="active" onclick="homePage()">Home</a></li>
-      <li><a class="active" onclick="skillsPage()">Resume</a></li>
-      <li><a class="active" onclick="projectsPage()">Projects</a></li>
-      <li><a class="active" onclick="hobbiesPage()">Hobbies</a></li>
-    </ul>
+    <div class="topNav">
+      <span><a class="topNavItem" onclick="homePage()">Home</a></span>
+      <span><a class="topNavItem" onclick="skillsPage()">Resume</a></span>
+      <span><a class="topNavItem" onclick="projectsPage()">Projects</a></span>
+      <span><a class="topNavItem active" onclick="hobbiesPage()">Hobbies</a></span>
+    </div>
 
     <div class="header">
       <p class="centeredText">Hobbies</p>
@@ -116,7 +115,7 @@
       <h2>Chess</h2>
       <div class="gallery">
         <a target="_blank" href="chess.com(1).jpg">
-          <img src="chess.png" alt="Chess Club" width="600" height="400">
+          <img src="images/chess.png" alt="Chess Club" width="600" height="400">
         </a>
         <div class="desc">I began playing chess during the pandemic and have since fallen in love with it! I have been
           the captain of the Dover-Sherborn chess team for 3 years now and I'm excited to see new generations of chess
@@ -128,7 +127,7 @@
       <h2>Band (Trumpet!)</h2>
       <div class="gallery">
         <a target="_blank" href="band.jpg">
-          <img src="band.jpg" alt="Dover Sherborn Band at the Woo Sox game" width="600" height="400">
+          <img src="images/band.jpg" alt="Dover Sherborn Band at the Woo Sox game" width="600" height="400">
         </a>
         <div class="desc">Over the years I have become increasingly involved in my school's band program, moving on from
           just being a curious trumpet student to now being involved in pep rallies, Memorial Day celebrations,
@@ -140,7 +139,7 @@
       <h2>Skiing</h2>
       <div class="gallery">
         <a target="_blank" href="skiing.jpg">
-          <img src="skiing.jpg" alt="View from Mt. Mansfield" width="600" height="300">
+          <img src="images/skiing.jpg" alt="View from Mt. Mansfield" width="600" height="300">
         </a>
         <div class="desc">Skiing is my favorite winter activity, especially when I'm with family and friends.</div>
       </div>
@@ -150,7 +149,7 @@
       <h2>Mountain Biking</h2>
       <div class="gallery">
         <a target="_blank" href="bike.jpg">
-          <img src="bike.jpg" alt="Ranch Camp Bike Shop" width="600" height="400">
+          <img src="images/bike.jpg" alt="Ranch Camp Bike Shop" width="600" height="400">
         </a>
         <div class="desc">Mountain Biking is my favorite summer activity. Some of my coolest interactions with nature
           have been during early morning mountain biking trips when bears, owls, and other creatures are still roaming
@@ -162,7 +161,7 @@
       <h2>Web Design</h2>
       <div class="gallery">
         <a target="_blank" href="bike.jpg">
-          <img src="web design.png" alt="Website Code" width="600" height="400">
+          <img src="images/web design.png" alt="Website Code" width="600" height="400">
         </a>
         <div class="desc">After my taking my first HTML Web Design class in school, I have since developed a passion for
           designing and building my own websites!</div>
@@ -173,7 +172,7 @@
       <h2>Robotics</h2>
       <div class="gallery">
         <a target="_blank" href="robot.png">
-          <img src="robot.png" alt="Team Robot" width="600" height="100">
+          <img src="images/robot.png" alt="Team Robot" width="600" height="100">
         </a>
         <div class="desc">I got started with robotics in my Junior year in high school. Through my experience with the
           team I have learned a lot about leadership, fundraising, and the engineering design process. If you are
