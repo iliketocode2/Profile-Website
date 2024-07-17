@@ -1,9 +1,19 @@
 html, body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
 
 .backgroundRec {
   animation: slide 4s ease-in-out infinite alternate;
@@ -43,6 +53,7 @@ html, body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 @media screen and (max-width: 600px) {
@@ -136,14 +147,25 @@ h1 {
     margin-top: 0px;
     word-spacing: 0px;
   }
-  /* .aboutBox{
-    width: 80%;
-    margin: 0 auto;
-  } */
   .mainContent{
     display: block;
   }
 }
+
+#resumeFrame {
+  width: 100%;
+  border: none;
+}
+
+.iframe-container {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 90%;
+  border-radius: 5px;
+}
+
 .link{
   color: lightblue;
 }
@@ -224,9 +246,10 @@ h1 {
 
 .checkbox-label {
   background-color: #111;
+  /*background-color: rgba(255, 255, 255, 0.7);*/
   width: 50px;
   height: 26px;
-  border-radius: 50px;
+  border-radius: 25px;
   position: relative;
   padding: 5px;
   cursor: pointer;
@@ -260,6 +283,20 @@ h1 {
   color: rgba(220, 220, 220);
 }
 
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px; 
+  right: 20px; 
+  z-index: 1000; 
+}
+
+@media only screen and (max-width: 800px) {
+  .dark-mode-toggle {
+    top: 0;
+    right: 0;
+  }
+}
+
 .infoBox{
   position: -webkit-sticky;
   position: sticky;
@@ -272,7 +309,6 @@ h1 {
   border: 5px solid gray;
   border-radius: 5px;
 }
-
 
 .gallery {
   border: transparent;
@@ -314,8 +350,6 @@ h1 {
   }
 }
 
-
-
 #icons {
   font-size:40px;
   padding: 5px;
@@ -341,8 +375,6 @@ h1 {
   z-index: 1000;
 }
 
-/* resize responsive */
-
 @media (max-width: 600px) {
   .footer-distributed .footer-left, .footer-distributed .footer-right {
     text-align: center;
@@ -356,3 +388,31 @@ h1 {
   }
 }
 
+/*-------------------------Loading circle-------------------------*/
+
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

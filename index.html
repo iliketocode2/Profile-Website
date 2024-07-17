@@ -11,10 +11,25 @@
 </head>
 
 <body>
+  <div id="loading-overlay">
+    <div class="loader"></div>
+  </div>
+
+
   <div class="page-container">
   <div class="backgroundRec"></div>
   <div class="backgroundRec backgroundRec2"></div>
   <div class="backgroundRec backgroundRec3"></div>
+  
+  <div class="dark-mode-toggle">
+    <input type="checkbox" class="checkbox" id="checkbox">
+    <label onclick="change()" for="checkbox" class="checkbox-label">
+      <i class="fa fa-sun-o"></i>
+      <i class="fa fa-moon-o"></i>
+      <span class="ball"></span>
+    </label>
+  </div>
+
   <div class="content" id="page1">
     <div class="topNav">
       <span><a class="topNavItem active" onclick="homePage()">Home</a></span>
@@ -48,7 +63,9 @@
     <div class="header">
       <p class="centeredText">Resume</p>
     </div>
-    <iframe src="https://docs.google.com/document/d/1lSkKShNRphKa4fnbEpuaeE1REsETmUX14UV60kVxU4A/preview" style="width:100%;min-height:500px;height:auto;border:0;"></iframe>
+    <div class="iframe-container">
+      <iframe id="resumeFrame" src="https://docs.google.com/document/d/1lSkKShNRphKa4fnbEpuaeE1REsETmUX14UV60kVxU4A/preview?embedded=true&rm=minimal" style="width:100%;min-height:500px;height:auto;border:0;"></iframe>
+    </div>
   </div>
 
   <div class="content" id="page3">
@@ -64,7 +81,7 @@
     </div>
 
     <p>The website I made for my robotics team!</p>
-    <a class="link" href="https://dshsrobotics.com/index.html">dshsrobotics.com</a>
+    <a class="link" href="https://dshsrobotics.com/index.html" target="_blank" rel="noopener noreferrer">dshsrobotics.com</a>
     <div class="header">
       <img class="projectImage" src="images/robotics team cover.png" />
     </div>
@@ -78,7 +95,7 @@
     </div>
 
     <p>A website that generates iterations of the Mandelbrot Set with zoom capabilities</p>
-    <a class="link" href="https://wills-fractal-generator-v1--iliketocode2.repl.co/">View my Fractal Generator Here</a>
+    <a class="link" href="https://wills-fractal-generator-v1--iliketocode2.repl.co/" target="_blank" rel="noopener noreferrer">View my Fractal Generator Here</a>
     <div class="header">
       <img class="projectImage"
         src="images/willFractal2.png" />
@@ -90,7 +107,7 @@
     </div>
 
     <p>A pong game that I created on Code.org's app lab</p>
-    <a class="link" href="https://studio.code.org/projects/applab/o0hDC9nUEVWDZsVRUaRonSjqOA-t3MYLHqWAwwaGW9U">View my
+    <a class="link" href="https://studio.code.org/projects/applab/o0hDC9nUEVWDZsVRUaRonSjqOA-t3MYLHqWAwwaGW9U" target="_blank" rel="noopener noreferrer">View my
       Pong Game Here</a>
     <div class="header">
       <img style="width:200px;" class="projectImage"
@@ -182,15 +199,7 @@
     </div>
 
   </div>
-  <div>
-    <input type="checkbox" class="checkbox" id="checkbox">
-    <label onclick="change()" for="checkbox" class="checkbox-label">
-      <i class="fa fa-sun-o"></i>
-      <i class="fa fa-moon-o"></i>
-      <span class="ball"></span>
-    </label>
-  </div>
-  
+
   </div>
 
   <footer class="footer-distributed">
