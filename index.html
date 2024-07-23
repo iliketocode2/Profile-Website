@@ -60,15 +60,17 @@
       <span><a class="topNavItem" onclick="projectsPage()">Projects</a></span>
       <span><a class="topNavItem" onclick="hobbiesPage()">Hobbies</a></span>
     </div>
-    <div class="header">
+
+    <!--<div class="header">
       <p class="centeredText">Resume</p>
-    </div>
+    </div>-->
+
     <div class="iframe-container">
       <iframe id="resumeFrame" src="https://docs.google.com/document/d/1lSkKShNRphKa4fnbEpuaeE1REsETmUX14UV60kVxU4A/preview?embedded=true&rm=minimal" style="width:100%;min-height:500px;height:auto;border:0;"></iframe>
     </div>
   </div>
 
-  <div class="content" id="page3">
+  <div class="content three" id="page3">
     <div class="topNav">
       <span><a class="topNavItem" onclick="homePage()">Home</a></span>
       <span><a class="topNavItem" onclick="skillsPage()">Resume</a></span>
@@ -76,44 +78,86 @@
       <span><a class="topNavItem" onclick="hobbiesPage()">Hobbies</a></span>
     </div>
 
-    <div class="header">
+    <!--<div class="header">
       <p class="centeredText">Projects</p>
-    </div>
+    </div>-->
 
-    <p>The website I made for my robotics team!</p>
-    <a class="link" href="https://dshsrobotics.com/index.html" target="_blank" rel="noopener noreferrer">dshsrobotics.com</a>
-    <div class="header">
-      <img class="projectImage" src="images/robotics team cover.png" />
-    </div>
+    <br>
 
-    <p>A collaborative open source research project to determine the effectiveness of transforming a 3D printer into a
-      microscope (paper coming soon!).</p>
-    <div class="header">
-      <img class="projectImage" src="images/microscopeFusion360.png" />
-      <img class="projectImage" src="images/microscope1.jpg" />
-      <img class="projectImage" src="images/microscope2.jpg" />
-    </div>
+    <div id="projects-container">
+      <div class="project-container">
+        <div class="project-image-container">
+          <img src="images/robotics team cover.png" alt="Robotics Website Cover">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title"><a href="https://dshsrobotics.com/index.html" target="_blank" rel="noopener noreferrer">5276 Robotics Website</a></h3>
+          <p class="project-date">2023 - 2024 | HTML, JavaScript, CSS</p>
+          <p class="project-description">I made this website for my school's FIRST Robotics team. It was the first major website that I actually deployed.</p>
+        </div>
+      </div>
 
-    <p>A website that generates iterations of the Mandelbrot Set with zoom capabilities</p>
-    <a class="link" href="https://wills-fractal-generator-v1--iliketocode2.repl.co/" target="_blank" rel="noopener noreferrer">View my Fractal Generator Here</a>
-    <div class="header">
-      <img class="projectImage"
-        src="images/willFractal2.png" />
-    </div>
+      <div class="project-container">
+        <div class="project-image-container">
+          <img src="images/robot24.jpg" alt="5276 Broken Code Robot 2024">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">
+            <a href="https://collaborate.shapr3d.com/v/ph_cqrzNmELp2-bVyTiZt" target="_blank" rel="noopener noreferrer">Hook Mechanism</a>
+            <a class="none">and</a>
+            <a href="https://collaborate.shapr3d.com/v/ltu1S9aaVxZQYumGc5XWy" target="_blank" rel="noopener noreferrer">Spool Design</a>
+            <a class="none">for FTC Robot</a>
+          </h3>
+          <p class="project-date">Jan 2024 | Shapr3D</p>
+          <p class="project-description">These are some of the parts I designed for our team's robot during the 2023-24 season. The hook mechanism was able to lift the robot off the ground using a tape measure mounted inside of and controlled by this geared setup.</p>
+        </div>
+      </div>
 
-    <p>A few examples of some of the model rockets I've built:</p>
-    <div class="header">
-      <img class="projectImage" src="images/rockets.jpg" />
-    </div>
+      <div class="project-container">
+        <div class="project-image-container">
+          <img src="images/microscopeFusion360.png" alt="Microscope Design on Fusion 360">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title"><a class="none">CoreXY Microscope</a></h3> <!-- TODO: add the external image gallery -->
+          <p class="project-date">June 2023 | Fusion 360, Onshape, C#</p>
+          <p class="project-description">A collaborative open source research project to determine the effectiveness of transforming a 3D printer into a microscope (paper coming soon!)</p>
+        </div>
+      </div>
 
-    <p>A pong game that I created on Code.org's app lab</p>
-    <a class="link" href="https://studio.code.org/projects/applab/o0hDC9nUEVWDZsVRUaRonSjqOA-t3MYLHqWAwwaGW9U" target="_blank" rel="noopener noreferrer">View my
-      Pong Game Here</a>
-    <div class="header">
-      <img style="width:200px;" class="projectImage"
-        src="images/willPong1.png" />
-      <img style="width:200px;" class="projectImage"
-        src="images/willPong.png" />
+      <div class="project-container">
+        <div class="project-image-container">
+          <img src="images/willPong1.png" alt="Pong Game Cover">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title"><a href="https://studio.code.org/projects/applab/o0hDC9nUEVWDZsVRUaRonSjqOA-t3MYLHqWAwwaGW9U" target="_blank" rel="noopener noreferrer">Pong Game</a></h3>
+          <p class="project-date"> April 2021 | JavaScript</p>
+          <p class="project-description">A pong game that I created on Code.org's app lab.</p>
+        </div>
+      </div>
+
+      <div class="project-container">
+        <div class="project-image-container">
+          <img src="images/willFractal2.png" alt="Mandelbrot Fraction">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title"><a href="https://wills-fractal-generator-v1--iliketocode2.repl.co/" target="_blank" rel="noopener noreferrer">Mandelbrot Fractal Generator</a></h3>
+          <p class="project-date">May 2020 | HTML, JavaScript, CSS</p>
+          <p class="project-description">A website that generates iterations of the Mandelbrot Set with zoom capabilities.</p>
+        </div>
+      </div>
+
+      <div class="project-container">
+        <div class="project-image-container">
+          <img src="images/rockets.jpg" alt="Model Rockets">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title"><a class="none">Model Rockets</a></h3>
+          <p class="project-date">2015 - 2023 | Estes and Custom Builds</p>
+          <p class="project-description">In my spare time I enjoy building model rockets and launching them-- from double staged models to pyramid versions they're a fun summer and fall project.</p>
+        </div>
+      </div>
+
+      <button id="see-more-btn" class="see-more-btn">Load More</button>
+
     </div>
   </div>
 
@@ -125,9 +169,9 @@
       <span><a class="topNavItem active" onclick="hobbiesPage()">Hobbies</a></span>
     </div>
 
-    <div class="header">
+    <!--<div class="header">
       <p class="centeredText">Hobbies</p>
-    </div>
+    </div>-->
 
     <div class="responsive">
       <h2>Chess</h2>
@@ -210,7 +254,7 @@
       <a style="color:inherit;" href="https://www.linkedin.com/in/william-goldman-79125a283/" target="_blank"
         rel="noopener noreferrer"><i class="fa fa-linkedin" id="icons"></i></a>
     </div>
-    <p style="font-size:10px;">William Goldman &copy; 2023</p>
+    <p style="font-size:10px;">William Goldman &copy; 2024</p>
   </footer>
   <script src="script.js"></script>
 </body>

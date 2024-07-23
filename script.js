@@ -5,8 +5,45 @@ var switchingPage = 0;
 
 //hide content until page load
 document.addEventListener("DOMContentLoaded", function() {
+  
+  //show only first four projects on project page
   let images = document.querySelectorAll('img');
   let loaded = 0;
+  const projectsContainer = document.getElementById('projects-container');
+  const seeMoreBtn = document.getElementById('see-more-btn');
+  const projectsPerPage = 4;
+  let currentlyShown = projectsPerPage;
+
+  function hideExcessProjects() {
+    const projects = projectsContainer.getElementsByClassName('project-container');
+    for (let i = projectsPerPage; i < projects.length; i++) {
+      projects[i].classList.add('hidden');
+    }
+    if (projects.length <= projectsPerPage) {
+      seeMoreBtn.classList.add('hidden');
+    }
+  }
+
+  function showMoreProjects() {
+    const projects = projectsContainer.getElementsByClassName('project-container');
+    for (let i = currentlyShown; i < currentlyShown + projectsPerPage && i < projects.length; i++) {
+      projects[i].classList.remove('hidden');
+      setTimeout(() => {
+        projects[i].style.opacity = 1;
+        projects[i].style.transform = 'translateY(0)';
+      }, 50 * (i - currentlyShown));
+    }
+    currentlyShown += projectsPerPage;
+    if (currentlyShown >= projects.length) {
+      seeMoreBtn.classList.add('hidden');
+    }
+  }
+
+  seeMoreBtn.addEventListener('click', showMoreProjects);
+
+  hideExcessProjects();
+
+  // Preload images
 
   function imageLoaded() {
     loaded++;
@@ -42,27 +79,29 @@ function allLoaded() {
 }
 
 function lightChange(){
-    switchingPage = 1;
-    change();
+  switchingPage = 1;
+  change();
 }
+
 function change(){
-  var element = document.getElementById(pageId);
+  var body = document.body;
+  
   if (switchingPage == 0){
     if (lightDark == 0){
-      element.classList.add("dark-mode");
+      body.classList.add("dark-mode");
       lightDark = 1;
     }
     else if (lightDark == 1){
-      element.classList.remove("dark-mode");
+      body.classList.remove("dark-mode");
       lightDark = 0;
     }
   }
   else {
     if (lightDark == 0){
-      element.classList.remove("dark-mode");
+      body.classList.remove("dark-mode");
     }
     else {
-      element.classList.add("dark-mode");
+      body.classList.add("dark-mode");
     }
   }
   switchingPage = 0;
