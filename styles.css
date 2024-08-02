@@ -22,27 +22,6 @@ body {
   --date-color: #666;
 }
 
-/* Dark mode styles */
-body.dark-mode {
-  --text-color: white;
-  --bg-color: rgba(20, 20, 20, .9);
-  --link-color: #64b5f6;
-  --date-color: #cecdcd;
-}
-
-body.dark-mode .content .project-info  a {
-  color: var(--link-color) !important;
-}
-
-body.dark-mode .content .project-date {
-  color: var(--date-color) !important;
-}
-
-body.dark-mode .content .see-more-btn{
-  background-color: var(--link-color);
-  color: white;
-}
-
 .backgroundRec {
   animation: slide 4s ease-in-out infinite alternate;
   background-image: linear-gradient(-40deg, rgb(142, 255, 255) 50%, rgb(142, 210, 241) 50%);
@@ -54,13 +33,16 @@ body.dark-mode .content .see-more-btn{
   top:0;
   z-index:-1;
 }
+
 .backgroundRec2 {
   animation-direction: alternate-reverse;
   animation-duration:4s;
 }
+
 .backgroundRec3 {
   animation-duration:5s;
 }
+
 .content {
   background-color:rgba(240, 240, 240, .9);
   border-radius: 10px;
@@ -379,8 +361,147 @@ h1 {
   background: skyblue; 
 }
 
+
+/*-------------------------Hobbies Gallery-------------------------*/
+.wrapImg {
+  -webkit-column-count: 4;
+  -moz-column-count:4;
+  column-count: 4;
+  -webkit-column-gap: 1em;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
+  margin: 1.5em;
+  padding: 0;
+  -moz-column-gap: 1.5em;
+  -webkit-column-gap: 1.5em;
+  column-gap: 1.5em;
+  font-size: .85em;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  display: inline-block;
+  background: #f0f0f3;
+  padding: 1em;
+  margin: 0 0 1.5em;
+  width: 100%;
+  -webkit-transition:1s ease all;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-shadow: 2px 2px 4px 0 #ccc;
+  border-radius: 5px;
+}
+
+.responsive img{
+  max-width: 100%;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapImg {
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+      column-count: 1;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px){
+  .wrapImg {
+      -moz-column-count: 3;
+      -webkit-column-count: 3;
+      column-count: 3;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .wrapImg {
+      -moz-column-count: 4;
+      -webkit-column-count: 4;
+      column-count: 4;
+  }
+}
+
+/*-------------------------Footer-------------------------*/
+
+#icons {
+  font-size:40px;
+  padding: 5px;
+  transition: all .2s ease-in-out; 
+}
+#icons:hover{
+  transform: scale(1.2); 
+}
+
+.footer-distributed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: lightblue;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  font: normal 16px sans-serif;
+  padding: 10px;
+  z-index: 1000;
+}
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+
 /*---------------------------dark mode control-----------------------------*/
 /* light/dark mode toggle button: thanks https://codepen.io/Umer_Farooq/pen/eYJgKGN !*/
+
+/* Dark mode styles */
+body.dark-mode {
+  --text-color: white;
+  --bg-color: rgba(20, 20, 20, .9);
+  --link-color: #64b5f6;
+  --date-color: #cecdcd;
+}
+
+body.dark-mode .content .project-info  a {
+  color: var(--link-color) !important;
+}
+
+body.dark-mode .content .project-date {
+  color: var(--date-color) !important;
+}
+
+body.dark-mode .content .see-more-btn{
+  background-color: var(--link-color);
+  color: white;
+}
+
+body.dark-mode .responsive{
+  background-color: #282828;
+  box-shadow: 2px 2px 4px 0 #6a6565;
+  color: white;
+}
 
 * {box-sizing: border-box;}
 
@@ -434,101 +555,6 @@ h1 {
   .dark-mode-toggle {
     top: 0;
     right: 0;
-  }
-}
-
-/*-------------------------Hobbies Gallery-------------------------*/
-
-.infoBox{
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  height: 50px;
-  background-color: inherit;
-  padding: 5px;
-  font-size: 20px;
-  text-align: center;
-  border: 5px solid gray;
-  border-radius: 5px;
-}
-
-.gallery {
-  border: transparent;
-  border-radius: 10px;
-  box-sizing: border-box;
-  padding: 10px;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
-
-/*-------------------------Footer-------------------------*/
-
-#icons {
-  font-size:40px;
-  padding: 5px;
-  transition: all .2s ease-in-out; 
-}
-#icons:hover{
-  transform: scale(1.2); 
-}
-
-.footer-distributed {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
-  background-color: lightblue;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: center;
-  font: normal 16px sans-serif;
-  padding: 10px;
-  z-index: 1000;
-}
-
-@media (max-width: 600px) {
-  .footer-distributed .footer-left, .footer-distributed .footer-right {
-    text-align: center;
-  }
-  .footer-distributed .footer-right {
-    float: none;
-    margin: 0 auto 20px;
-  }
-  .footer-distributed .footer-left p.footer-links {
-    line-height: 1.8;
   }
 }
 
